@@ -17,6 +17,7 @@
 
 /** 自定义左边按钮 */
 +(void)addLeftButton:(UINavigationItem*)nav withName:(NSString*)name Done:(void(^)())click;
++(void)addLeftButton:(UINavigationItem*)nav withIMG:(NSString*)image Done:(void(^)())click;
 @end
 
 

@@ -13,6 +13,9 @@
 		215FA6E01EB85D300021308F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215FA6DE1EB85D300021308F /* Main.storyboard */; };
 		215FA6E21EB85D300021308F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 215FA6E11EB85D300021308F /* Assets.xcassets */; };
 		215FA6E51EB85D300021308F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215FA6E31EB85D300021308F /* LaunchScreen.storyboard */; };
+		215FA6F81EB85E690021308F /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 215FA6F71EB85E690021308F /* UIButton+Block.m */; };
+		215FA6FE1EB85ECC0021308F /* Ys_Backbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 215FA6FB1EB85ECC0021308F /* Ys_Backbutton.m */; };
+		215FA6FF1EB85ECC0021308F /* Ys_Rightbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 215FA6FD1EB85ECC0021308F /* Ys_Rightbutton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		215FA6E11EB85D300021308F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		215FA6E41EB85D300021308F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		215FA6E61EB85D300021308F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		215FA6F61EB85E690021308F /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		215FA6F71EB85E690021308F /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		215FA6FA1EB85ECC0021308F /* Ys_Backbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ys_Backbutton.h; sourceTree = "<group>"; };
+		215FA6FB1EB85ECC0021308F /* Ys_Backbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ys_Backbutton.m; sourceTree = "<group>"; };
+		215FA6FC1EB85ECC0021308F /* Ys_Rightbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ys_Rightbutton.h; sourceTree = "<group>"; };
+		215FA6FD1EB85ECC0021308F /* Ys_Rightbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ys_Rightbutton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +67,11 @@
 		215FA6D41EB85D300021308F /* NavItems */ = {
 			isa = PBXGroup;
 			children = (
-				215FA6D81EB85D300021308F /* AppDelegate.h */,
-				215FA6D91EB85D300021308F /* AppDelegate.m */,
+				215FA6F61EB85E690021308F /* UIButton+Block.h */,
+				215FA6F71EB85E690021308F /* UIButton+Block.m */,
+				215FA6F91EB85ECC0021308F /* NavClass */,
 				215FA6DB1EB85D300021308F /* ViewController.h */,
 				215FA6DC1EB85D300021308F /* ViewController.m */,
-				215FA6DE1EB85D300021308F /* Main.storyboard */,
-				215FA6E11EB85D300021308F /* Assets.xcassets */,
-				215FA6E31EB85D300021308F /* LaunchScreen.storyboard */,
-				215FA6E61EB85D300021308F /* Info.plist */,
 				215FA6D51EB85D300021308F /* Supporting Files */,
 			);
 			path = NavItems;
@@ -74,9 +80,26 @@
 		215FA6D51EB85D300021308F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				215FA6D81EB85D300021308F /* AppDelegate.h */,
+				215FA6D91EB85D300021308F /* AppDelegate.m */,
 				215FA6D61EB85D300021308F /* main.m */,
+				215FA6DE1EB85D300021308F /* Main.storyboard */,
+				215FA6E11EB85D300021308F /* Assets.xcassets */,
+				215FA6E31EB85D300021308F /* LaunchScreen.storyboard */,
+				215FA6E61EB85D300021308F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		215FA6F91EB85ECC0021308F /* NavClass */ = {
+			isa = PBXGroup;
+			children = (
+				215FA6FA1EB85ECC0021308F /* Ys_Backbutton.h */,
+				215FA6FB1EB85ECC0021308F /* Ys_Backbutton.m */,
+				215FA6FC1EB85ECC0021308F /* Ys_Rightbutton.h */,
+				215FA6FD1EB85ECC0021308F /* Ys_Rightbutton.m */,
+			);
+			path = NavClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +175,9 @@
 			files = (
 				215FA6DD1EB85D300021308F /* ViewController.m in Sources */,
 				215FA6DA1EB85D300021308F /* AppDelegate.m in Sources */,
+				215FA6F81EB85E690021308F /* UIButton+Block.m in Sources */,
+				215FA6FE1EB85ECC0021308F /* Ys_Backbutton.m in Sources */,
+				215FA6FF1EB85ECC0021308F /* Ys_Rightbutton.m in Sources */,
 				215FA6D71EB85D300021308F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

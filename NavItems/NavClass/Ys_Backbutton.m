@@ -28,15 +28,28 @@
 
 /** 自定义左边按钮 */
 +(void)addLeftButton:(UINavigationItem*)nav withName:(NSString*)name Done:(void(^)())click{
-    UIButton *rightB = [UIButton buttonWithType:UIButtonTypeSystem];
-    rightB.tintColor=[UIColor whiteColor];
-    rightB.frame = CGRectMake(0, 0, 50, 44);
-    rightB.imageEdgeInsets=UIEdgeInsetsMake(0, -35, 0, 0);
-    [rightB setTitle:name forState:UIControlStateNormal];
-    [rightB addAction:^(UIButton*B){
+    UIButton *LeftB = [UIButton buttonWithType:UIButtonTypeSystem];
+    LeftB.tintColor=[UIColor whiteColor];
+    LeftB.frame = CGRectMake(0, 0, 50, 44);
+    LeftB.imageEdgeInsets=UIEdgeInsetsMake(0, -35, 0, 0);
+    [LeftB setTitle:name forState:UIControlStateNormal];
+    [LeftB addAction:^(UIButton*B){
         click();
     }];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightB];
-    nav.leftBarButtonItem = rightItem;
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:LeftB];
+    nav.leftBarButtonItem = leftItem;
 }
++(void)addLeftButton:(UINavigationItem*)nav withIMG:(NSString*)image Done:(void(^)())click{
+    UIButton *LeftB = [UIButton buttonWithType:UIButtonTypeSystem];
+    LeftB.tintColor=[UIColor whiteColor];
+    LeftB.frame = CGRectMake(0, 0, 50, 44);
+    LeftB.imageEdgeInsets=UIEdgeInsetsMake(0, -35, 0, 0);
+    [LeftB setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [LeftB addAction:^(UIButton*B){
+        click();
+    }];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:LeftB];
+    nav.leftBarButtonItem = leftItem;
+}
+
 @end
